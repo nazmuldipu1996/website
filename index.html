@@ -1,352 +1,801 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Nazmul Hasan Dipu - Industrial Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.9.0, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  <meta name="description" content="Industrial and Production Engineer specializing in process optimization, CAD design, and manufacturing solutions.">
+  
+  <title>Md. Nazmul Hasan Dipu - Industrial Engineer</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/parallax/jarallax.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary-color: #2add8d;
+      --secondary-color: #1a0d2e;
+      --bg-dark: #0a0a0a;
+      --bg-secondary: #1a1a1a;
+      --text-light: #ffffff;
+      --text-muted: #cccccc;
+      --gradient-primary: linear-gradient(135deg, #2add8d, #1a0d2e);
+    }
+    
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Rajdhani', sans-serif;
+    }
+    
+    .cyberpunk-bg {
+      background: var(--bg-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cyberpunk-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        linear-gradient(rgba(42, 221, 141, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(42, 221, 141, 0.1) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: gridMove 20s linear infinite;
+      z-index: 1;
+    }
+    
+    @keyframes gridMove {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(50px, 50px); }
+    }
+    
+    .cyberpunk-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .neon-text {
+      font-family: 'Orbitron', monospace;
+      color: var(--text-light);
+      text-shadow: 0 0 10px var(--primary-color);
+    }
+    
+    .neon-gradient {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .btn-neon {
+      background: var(--gradient-primary);
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .btn-neon:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(42, 221, 141, 0.3);
+      color: white;
+    }
+    
+    .btn-outline-neon {
+      background: transparent;
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+      padding: 10px 28px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .btn-outline-neon:hover {
+      background: var(--primary-color);
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    .profile-frame {
+      width: 300px;
+      height: 300px;
+      border: 3px solid var(--primary-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 0 auto;
+      background: radial-gradient(circle at center, var(--primary-color), var(--secondary-color), var(--primary-color));
+      padding: 10px;
+    }
+    
+    .profile-placeholder {
+      width: 280px;
+      height: 280px;
+      background: var(--bg-secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: var(--primary-color);
+    }
+    
+    .timeline {
+      position: relative;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--gradient-primary);
+      transform: translateX(-50%);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .timeline-item:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+    
+    .timeline-date {
+      background: var(--gradient-primary);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      white-space: nowrap;
+      min-width: 200px;
+      text-align: center;
+    }
+    
+    .timeline-content {
+      flex: 1;
+      background: var(--bg-secondary);
+      padding: 2rem;
+      border-radius: 10px;
+      border: 1px solid #333;
+      margin: 0 2rem;
+    }
+    
+    .skill-bar {
+      height: 8px;
+      background: var(--bg-secondary);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 0.5rem;
+    }
+    
+    .skill-progress {
+      height: 100%;
+      background: var(--gradient-primary);
+      border-radius: 4px;
+      transition: width 2s ease;
+    }
+    
+    .project-card {
+      background: var(--bg-secondary);
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary-color);
+      box-shadow: 0 10px 30px rgba(42, 221, 141, 0.2);
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--gradient-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+    }
+    
+    .form-control {
+      background: var(--bg-secondary);
+      border: 1px solid #333;
+      color: var(--text-light);
+    }
+    
+    .form-control:focus {
+      background: var(--bg-secondary);
+      border-color: var(--primary-color);
+      color: var(--text-light);
+      box-shadow: 0 0 10px rgba(42, 221, 141, 0.3);
+    }
+    
+    .section-title {
+      font-family: 'Orbitron', monospace;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: var(--gradient-primary);
+    }
+    
+    .tech-badge {
+      background: var(--bg-dark);
+      border: 1px solid var(--primary-color);
+      color: var(--primary-color);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      margin: 0.25rem;
+      display: inline-block;
+    }
+    
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      font-family: 'Orbitron', monospace;
+    }
+    
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 20px;
+      }
+      
+      .timeline-item {
+        flex-direction: column !important;
+        align-items: flex-start;
+        padding-left: 50px;
+      }
+      
+      .timeline-content {
+        margin: 1rem 0 0 0 !important;
+      }
+      
+      .profile-frame {
+        width: 250px;
+        height: 250px;
+      }
+      
+      .profile-placeholder {
+        width: 230px;
+        height: 230px;
+        font-size: 3rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">DIPU</span>
-                <span class="logo-dot">.</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+  
+  <!-- Navigation -->
+  <section data-bs-version="5.1" class="menu menu1 cid-tNFL7kuHKq" once="menu" id="menu1-0">
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg" style="background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(10px);">
+      <div class="container-fluid">
+        <div class="navbar-brand">
+          <span class="navbar-logo">
+            <img src="./file/img/logo.png" alt="Dipu Logo" style="height: 40px; width: auto;">
+          </span>
         </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+            <li class="nav-item"><a class="nav-link link text-white" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link link text-white" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link link text-white" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link link text-white" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link link text-white" href="#education">Education</a></li>
+            <li class="nav-item"><a class="nav-link link text-white" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link link text-white" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
+  </section>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="grid-overlay"></div>
-            <div class="particles" id="particles"></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    <span>MD. NAZMUL HASAN</span>
-                    <span class="hero-surname">DIPU</span>
+  <!-- Hero Section -->
+  <section data-bs-version="5.1" class="header1 cid-tNFL7kuHKr cyberpunk-bg" id="hero">
+    <div class="cyberpunk-content">
+      <div class="container-fluid">
+        <div class="row justify-content-center" style="min-height: 100vh; align-items: center;">
+          <div class="col-12 col-lg-8">
+            <div class="row">
+              <div class="col-lg-7 col-md-12">
+                <h1 class="mbr-section-title mbr-fonts-style mb-3 neon-text" style="font-size: 3.5rem; line-height: 1.2;">
+                  MD. NAZMUL HASAN<br>
+                  <span class="neon-gradient">DIPU</span>
                 </h1>
-                <p class="hero-subtitle">Industrial & Production Engineer</p>
-                <p class="hero-description">Optimizing processes, designing solutions, and driving innovation in industrial engineering</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                <h2 class="mbr-section-subtitle mbr-fonts-style mb-3" style="color: var(--primary-color); font-size: 1.5rem; font-weight: 600;">
+                  Industrial & Production Engineer
+                </h2>
+                <p class="mbr-text mbr-fonts-style mb-4" style="color: var(--text-muted); font-size: 1.1rem; max-width: 500px;">
+                  Optimizing processes, designing solutions, and driving innovation in industrial engineering
+                </p>
+                <div class="mbr-section-btn mt-3">
+                  <a class="btn btn-neon" href="#contact">Get In Touch</a>
+                  <a class="btn btn-outline-neon ms-2" href="#about">Learn More</a>
                 </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-frame">
-                    <div class="image-placeholder">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
+              </div>
+              <div class="col-lg-5 col-md-12 text-center">
+                <div class="profile-frame">
+                  <img src="./file/img/profile.png" alt="Md. Nazmul Hasan Dipu" style="width: 280px; height: 280px; border-radius: 50%; object-fit: cover;">
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I am a dedicated Industrial and Production Engineer with expertise in optimizing manufacturing processes, CAD design, and data analysis. Currently pursuing my Master's degree while bringing practical experience from both corporate and freelance environments.</p>
-                    <p>My passion lies in solving complex industrial problems through innovative engineering solutions, process optimization, and leveraging cutting-edge technology to drive efficiency and productivity.</p>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="4">0</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="15">0</span>
-                            <span class="stat-label">Skills Mastered</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="1">0</span>
-                            <span class="stat-label">Publication</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="tech-stack">
-                        <div class="tech-item">AutoCAD</div>
-                        <div class="tech-item">SolidWorks</div>
-                        <div class="tech-item">Python</div>
-                        <div class="tech-item">Power BI</div>
-                        <div class="tech-item">Excel</div>
-                    </div>
-                </div>
-            </div>
+  <!-- About Section -->
+  <section data-bs-version="5.1" class="content1 cid-tNFL7kuHKs" id="about" style="background: var(--bg-secondary); padding: 100px 0;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <h2 class="section-title">About Me</h2>
         </div>
-    </section>
+      </div>
+      <div class="row">
+  <div class="col-lg-8 col-md-12">
+    <p class="mbr-text mbr-fonts-style mb-4" style="color: var(--text-muted); font-size: 1.1rem;">
+      After obtaining my B.Sc. in Industrial and Production Engineering in 2020, I embarked on a freelancing journey on Upwork due to the COVID-19 pandemic lockdown that limited local job opportunities. This transition proved to be transformative, allowing me to work in diverse fields while focusing on areas directly relevant to my major that demanded problem-solving, critical thinking, creativity, and strong technical skills.
+    </p>
+    <p class="mbr-text mbr-fonts-style mb-4" style="color: var(--text-muted); font-size: 1.1rem;">
+      My freelancing expertise encompasses highly technical skills including computer-aided design, computer-aided engineering, simulation, finite element analysis, and design for manufacturability. These competencies not only advance my career but also support my future research endeavors in solving complex industrial challenges.
+    </p>
+    <p class="mbr-text mbr-fonts-style mb-4" style="color: var(--text-muted); font-size: 1.1rem;">
+      Parallel to my freelancing work, I have been actively engaged in research and academic writing. To date, I have completed five research articles: two published in Q1 and Q2 journals respectively, one recently accepted for publication, and two additional articles available as preprints. Additionally, I achieved certification as a CSWA (Certified SolidWorks Associate in Mechanical Design) with an outstanding score of 235 out of 240.
+    </p>
+    <div class="row text-center mt-5">
+      <div class="col-md-3">
+        <div class="stat-number">4</div>
+        <p style="color: var(--text-muted);">Years Experience</p>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-number">5</div>
+        <p style="color: var(--text-muted);">Research Articles</p>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-number">15</div>
+        <p style="color: var(--text-muted);">Skills Mastered</p>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-number">235</div>
+        <p style="color: var(--text-muted);">CSWA Score /240</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-12">
+    <div class="tech-stack">
+      <span class="tech-badge">AutoCAD</span>
+      <span class="tech-badge">SolidWorks</span>
+      <span class="tech-badge">CAE</span>
+      <span class="tech-badge">FEA</span>
+      <span class="tech-badge">Python</span>
+      <span class="tech-badge">Power BI</span>
+      <span class="tech-badge">Excel</span>
+      <span class="tech-badge">Simulation</span>
+      <span class="tech-badge">DFM</span>
+      <span class="tech-badge">Problem Solving</span>
+      <span class="tech-badge">Research</span>
+      <span class="tech-badge">CSWA Certified</span>
+    </div>
+  </div>
+</div>
+    </div>
+  </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
+  <!-- Experience Section -->
+  <section data-bs-version="5.1" class="content2 cid-tNFL7kuHKt cyberpunk-bg" id="experience" style="padding: 100px 0;">
+    <div class="cyberpunk-content">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
             <h2 class="section-title">Experience</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Feb 2024 - Dec 2024</div>
-                    <div class="timeline-content">
-                        <h3>Operation Officer</h3>
-                        <h4>Green BD Ltd.</h4>
-                        <ul>
-                            <li>Coordinated CNC machine usage to avoid downtime and optimize machine load</li>
-                            <li>Planned weekly production schedules based on customer orders</li>
-                            <li>Refined G-code and M-code for smooth CNC operation</li>
-                        </ul>
-                    </div>
+              <div class="timeline-item">
+                <div class="timeline-date">Feb 2024 - Dec 2024</div>
+                <div class="timeline-content">
+                  <h3 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 0.5rem;">Operation Officer</h3>
+                  <h4 style="color: var(--text-muted); margin-bottom: 1rem;">Green BD Ltd.</h4>
+                  <ul style="list-style: none; padding-left: 0;">
+                    <li style="margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem;">
+                      <span style="position: absolute; left: 0; color: var(--primary-color);">▶</span>
+                      Coordinated CNC machine usage to avoid downtime and optimize machine load
+                    </li>
+                    <li style="margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem;">
+                      <span style="position: absolute; left: 0; color: var(--primary-color);">▶</span>
+                      Planned weekly production schedules based on customer orders
+                    </li>
+                    <li style="margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem;">
+                      <span style="position: absolute; left: 0; color: var(--primary-color);">▶</span>
+                      Refined G-code and M-code for smooth CNC operation
+                    </li>
+                  </ul>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">May 2020 - Aug 2023</div>
-                    <div class="timeline-content">
-                        <h3>Industrial Engineer (Remote)</h3>
-                        <h4>Upwork Freelancing Platform</h4>
-                        <ul>
-                            <li>Designed CAD models of novel products based on client requirements</li>
-                            <li>Enhanced existing products by improving manufacturability and aesthetics</li>
-                            <li>Optimized product internal space and minimized overall product size</li>
-                            <li>Contributed innovative ideas for design improvement and issue resolution</li>
-                        </ul>
-                        <div class="achievement-badge">Top Rated Plus Badge</div>
-                    </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-date">May 2020 - Aug 2023</div>
+                <div class="timeline-content">
+                  <h3 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 0.5rem;">Industrial Engineer (Remote)</h3>
+                  <h4 style="color: var(--text-muted); margin-bottom: 1rem;">Upwork Freelancing Platform</h4>
+                  <ul style="list-style: none; padding-left: 0;">
+                    <li style="margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem;">
+                      <span style="position: absolute; left: 0; color: var(--primary-color);">▶</span>
+                      Designed CAD models of novel products based on client requirements
+                    </li>
+                    <li style="margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem;">
+                      <span style="position: absolute; left: 0; color: var(--primary-color);">▶</span>
+                      Enhanced existing products by improving manufacturability and aesthetics
+                    </li>
+                    <li style="margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem;">
+                      <span style="position: absolute; left: 0; color: var(--primary-color);">▶</span>
+                      Optimized product internal space and minimized overall product size
+                    </li>
+                    <li style="margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem;">
+                      <span style="position: absolute; left: 0; color: var(--primary-color);">▶</span>
+                      Contributed innovative ideas for design improvement and issue resolution
+                    </li>
+                  </ul>
+                  <span style="background: linear-gradient(135deg, #2add8d, #2d1b4e); color: white; padding: 5px 15px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; margin-top: 1rem; display: inline-block;">Top Rated Plus Badge</span>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Technical Skills</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">AutoCAD</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">SolidWorks</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Power BI</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="85%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Professional Skills</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">Problem Solving</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Project Management</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Teamwork</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Presentation</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="80%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <!-- Skills Section -->
+  <section data-bs-version="5.1" class="content3 cid-tNFL7kuHKu" id="skills" style="background: var(--bg-secondary); padding: 100px 0;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <h2 class="section-title">Skills</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+          <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 2rem; text-align: center;">Technical Skills</h3>
+          <div class="skill-item mb-4">
+            <span style="font-weight: 600;">AutoCAD</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 95%;"></div>
             </div>
+          </div>
+          <div class="skill-item mb-4">
+            <span style="font-weight: 600;">SolidWorks</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%;"></div>
+            </div>
+          </div>
+          <div class="skill-item mb-4">
+            <span style="font-weight: 600;">Python</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill-item mb-4">
+            <span style="font-weight: 600;">Power BI</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%;"></div>
+            </div>
+          </div>
         </div>
-    </section>
+        <div class="col-lg-6 col-md-12">
+          <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 2rem; text-align: center;">Professional Skills</h3>
+          <div class="skill-item mb-4">
+            <span style="font-weight: 600;">Problem Solving</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 95%;"></div>
+            </div>
+          </div>
+          <div class="skill-item mb-4">
+            <span style="font-weight: 600;">Project Management</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="skill-item mb-4">
+            <span style="font-weight: 600;">Teamwork</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%;"></div>
+            </div>
+          </div>
+          <div class="skill-item mb-4">
+            <span style="font-weight: 600;">Presentation</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
+  <!-- Education Section -->
+  <section data-bs-version="5.1" class="content4 cid-tNFL7kuHKv cyberpunk-bg" id="education" style="padding: 100px 0;">
+    <div class="cyberpunk-content">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
             <h2 class="section-title">Education</h2>
-            <div class="education-grid">
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="education-content">
-                        <h3>Bachelor of Science</h3>
-                        <h4>Industrial and Production Engineering</h4>
-                        <p class="institution">Shahjalal University of Science and Technology</p>
-                        <p class="duration">2016 - 2020</p>
-                        <p class="cgpa">CGPA: 3.04/4.00</p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects & Publications</h2>
-            <div class="projects-grid">
-                <div class="project-item">
-                    <div class="project-header">
-                        <i class="fas fa-file-alt"></i>
-                        <h3>Research Publication</h3>
-                    </div>
-                    <h4>Investigation of Low Back Pain Among Garment Workers</h4>
-                    <p>Published in Advances in Materials and Processing Technologies (2021). Research focused on identifying causes of low back pain among workers in garment factories.</p>
-                    <div class="project-tags">
-                        <span class="tag">Research</span>
-                        <span class="tag">Ergonomics</span>
-                        <span class="tag">Industrial Safety</span>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-header">
-                        <i class="fas fa-cogs"></i>
-                        <h3>Queuing Simulation</h3>
-                    </div>
-                    <h4>Easy Bikes at SUST Campus</h4>
-                    <p>Developed a comprehensive queuing simulation model using Arena Simulation Software to optimize bike sharing system efficiency.</p>
-                    <div class="project-tags">
-                        <span class="tag">Simulation</span>
-                        <span class="tag">Arena</span>
-                        <span class="tag">Optimization</span>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-header">
-                        <i class="fas fa-thermometer-half"></i>
-                        <h3>Temperature Measuring Device</h3>
-                    </div>
-                    <h4>IoT-based Monitoring System</h4>
-                    <p>Designed and developed an automated temperature measuring device for industrial applications with real-time monitoring capabilities.</p>
-                    <div class="project-tags">
-                        <span class="tag">IoT</span>
-                        <span class="tag">Sensors</span>
-                        <span class="tag">Automation</span>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-header">
-                        <i class="fas fa-solar-panel"></i>
-                        <h3>Solar LED Road Light</h3>
-                    </div>
-                    <h4>Sustainable Lighting Solution</h4>
-                    <p>Created a prototype for solar-based LED road lighting system, focusing on energy efficiency and sustainable urban infrastructure.</p>
-                    <div class="project-tags">
-                        <span class="tag">Solar Energy</span>
-                        <span class="tag">LED</span>
-                        <span class="tag">Sustainability</span>
-                    </div>
-                </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-12">
+            <div class="project-card text-center">
+              <div class="mb-3">
+                <i class="fas fa-university" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+              </div>
+              <h3 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 0.5rem;">Bachelor of Science</h3>
+              <h4 style="color: var(--text-light); margin-bottom: 0.5rem;">Industrial and Production Engineering</h4>
+              <p style="color: var(--text-muted); margin-bottom: 0.5rem;">Shahjalal University of Science and Technology</p>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">2016 - 2020</p>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">CGPA: 3.04/4.00</p>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
+  <!-- Projects Section -->
+  <section data-bs-version="5.1" class="content5 cid-tNFL7kuHKw" id="projects" style="background: var(--bg-secondary); padding: 100px 0;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <h2 class="section-title">Projects & Publications</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4">
+          <div class="project-card">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-file-alt me-3" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+              <h3 style="color: var(--primary-color); font-size: 1.2rem; margin: 0;">Research Publication</h3>
+            </div>
+            <h4 style="color: var(--text-light); margin-bottom: 1rem;">Investigation of Low Back Pain Among Garment Workers</h4>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Published in Advances in Materials and Processing Technologies (2021). Research focused on identifying causes of low back pain among workers in garment factories.</p>
+            <div>
+              <span class="tech-badge">Research</span>
+              <span class="tech-badge">Ergonomics</span>
+              <span class="tech-badge">Industrial Safety</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 mb-4">
+          <div class="project-card">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-cogs me-3" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+              <h3 style="color: var(--primary-color); font-size: 1.2rem; margin: 0;">Queuing Simulation</h3>
+            </div>
+            <h4 style="color: var(--text-light); margin-bottom: 1rem;">Easy Bikes at SUST Campus</h4>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Developed a comprehensive queuing simulation model using Arena Simulation Software to optimize bike sharing system efficiency.</p>
+            <div>
+              <span class="tech-badge">Simulation</span>
+              <span class="tech-badge">Arena</span>
+              <span class="tech-badge">Optimization</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 mb-4">
+          <div class="project-card">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-thermometer-half me-3" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+              <h3 style="color: var(--primary-color); font-size: 1.2rem; margin: 0;">Temperature Measuring Device</h3>
+            </div>
+            <h4 style="color: var(--text-light); margin-bottom: 1rem;">IoT-based Monitoring System</h4>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Designed and developed an automated temperature measuring device for industrial applications with real-time monitoring capabilities.</p>
+            <div>
+              <span class="tech-badge">IoT</span>
+              <span class="tech-badge">Sensors</span>
+              <span class="tech-badge">Automation</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 mb-4">
+          <div class="project-card">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-solar-panel me-3" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+              <h3 style="color: var(--primary-color); font-size: 1.2rem; margin: 0;">Solar LED Road Light</h3>
+            </div>
+            <h4 style="color: var(--text-light); margin-bottom: 1rem;">Sustainable Lighting Solution</h4>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Created a prototype for solar-based LED road lighting system, focusing on energy efficiency and sustainable urban infrastructure.</p>
+            <div>
+              <span class="tech-badge">Solar Energy</span>
+              <span class="tech-badge">LED</span>
+              <span class="tech-badge">Sustainability</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section data-bs-version="5.1" class="content6 cid-tNFL7kuHKx cyberpunk-bg" id="contact" style="padding: 100px 0;">
+    <div class="cyberpunk-content">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
             <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Phone</h4>
-                            <p>+8801882286112</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p>Mdipu.ipe.sust@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>LinkedIn</h4>
-                            <p>linkedin.com/in/dipu-ipe-sust</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <div class="contact-item d-flex align-items-center mb-4">
+              <div class="contact-icon me-3">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Phone</h4>
+                <p style="color: var(--text-muted); margin: 0;">+8801882286112</p>
+              </div>
             </div>
+            <div class="contact-item d-flex align-items-center mb-4">
+              <div class="contact-icon me-3">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Email</h4>
+                <p style="color: var(--text-muted); margin: 0;">Mdipu.ipe.sust@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item d-flex align-items-center mb-4">
+              <div class="contact-icon me-3">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div>
+                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">LinkedIn</h4>
+                <p style="color: var(--text-muted); margin: 0;">linkedin.com/in/dipu-ipe-sust</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div style="background: var(--bg-secondary); padding: 2rem; border-radius: 10px; border: 1px solid #333;">
+              <form>
+                <div class="mb-3">
+                  <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control" placeholder="Subject" required>
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-neon">Send Message</button>
+              </form>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Md. Nazmul Hasan Dipu. All rights reserved.</p>
+  <!-- Footer -->
+  <section data-bs-version="5.1" class="footer1 cid-tNFL7kuHKy" id="footer1-0" style="background: var(--bg-dark); padding: 2rem 0; border-top: 1px solid #333;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <p style="color: var(--text-muted); margin: 0;">&copy; 2025 Md. Nazmul Hasan Dipu. All rights reserved.</p>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/parallax/jarallax.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/ytplayer/index.js"></script>
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Active navigation link
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Contact form handling
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message! I will get back to you soon.');
+      this.reset();
+    });
+  </script>
 </body>
 </html>
