@@ -68,13 +68,23 @@ function animateCounters() {
   })
 }
 
-// Skill bars animation
-function animateSkillBars() {
-  const skillBars = document.querySelectorAll(".skill-progress")
-
-  skillBars.forEach((bar) => {
-    const width = bar.getAttribute("data-width")
-    bar.style.width = width
+// Skills animation
+function animateSkills() {
+  const skillItems = document.querySelectorAll(".skill-item-new")
+  
+  skillItems.forEach((item, index) => {
+    setTimeout(() => {
+      item.style.opacity = "1"
+      item.style.transform = "translateY(0)"
+      
+      // Animate stars
+      const stars = item.querySelectorAll(".star.filled")
+      stars.forEach((star, starIndex) => {
+        setTimeout(() => {
+          star.style.animation = "starPulse 0.5s ease-in-out"
+        }, starIndex * 100)
+      })
+    }, index * 100)
   })
 }
 
@@ -95,7 +105,7 @@ const observer = new IntersectionObserver((entries) => {
       }
 
       if (entry.target.classList.contains("skills")) {
-        setTimeout(animateSkillBars, 500)
+        setTimeout(animateSkills, 500)
       }
     }
   })
