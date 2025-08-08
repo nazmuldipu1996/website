@@ -90,7 +90,7 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.add("animate")
 
       // Trigger specific animations
-      if (entry.target.classList.contains("stats")) {
+      if (entry.target.classList.contains("about")) {
         animateCounters()
       }
 
@@ -198,11 +198,59 @@ window.addEventListener("load", () => {
       typeWriter(heroSubtitle, originalText, 100)
     }, 1000)
   }
+
+  // Add loading screen
+  const loadingScreen = document.createElement("div")
+  loadingScreen.innerHTML = `
+    <div style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        flex-direction: column;
+    ">
+        <div style="
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--border-color);
+            border-top: 3px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        "></div>
+        <p style="
+            color: var(--primary-color);
+            margin-top: 20px;
+            font-family: 'Orbitron', monospace;
+        ">Loading...</p>
+    </div>
+  `;
+
+  document.body.appendChild(loadingScreen)
+
+  // Remove loading screen after delay
+  setTimeout(() => {
+    loadingScreen.style.opacity = "0"
+    loadingScreen.style.transition = "opacity 0.5s ease"
+    setTimeout(() => {
+      loadingScreen.remove()
+    }, 500)
+  }, 1500)
 })
 
-// Add CSS class for active nav link
+// Add spin animation for loading
 const style = document.createElement("style")
 style.textContent = `
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
     .nav-link.active {
         color: var(--primary-color) !important;
     }
@@ -254,58 +302,3 @@ document.querySelectorAll(".project-item").forEach((item) => {
 document.querySelectorAll(".tech-item").forEach((item, index) => {
   item.style.animationDelay = `${Math.random() * 2}s`
 })
-
-// Add loading screen
-const loadingScreen = document.createElement("div")
-loadingScreen.innerHTML = `
-    <div style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--bg-primary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-        flex-direction: column;
-    ">
-        <div style="
-            width: 50px;
-            height: 50px;
-            border: 3px solid var(--border-color);
-            border-top: 3px solid var(--primary-color);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        "></div>
-        <p style="
-            color: var(--primary-color);
-            margin-top: 20px;
-            font-family: 'Orbitron', monospace;
-        ">Loading...</p>
-    </div>
-`
-
-document.body.appendChild(loadingScreen)
-
-// Remove loading screen after page loads
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    loadingScreen.style.opacity = "0"
-    loadingScreen.style.transition = "opacity 0.5s ease"
-    setTimeout(() => {
-      loadingScreen.remove()
-    }, 500)
-  }, 1500)
-})
-
-// Add spin animation for loading
-const spinStyle = document.createElement("style")
-spinStyle.textContent = `
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-`
-document.head.appendChild(spinStyle)
